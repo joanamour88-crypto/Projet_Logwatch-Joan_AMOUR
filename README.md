@@ -10,15 +10,15 @@ Il lit un fichier de logs Apache, applique six détections et écrit un rapport 
 
 ## Contenu du kit
 
-| Fichier | Rôle |
-|---|---|
-| `logwatch.py` | le script v0, base de départ |
-| `test_logwatch.py` | les quatre tests de Kevin, dont deux échouent |
-| `config.example.json` | les seuils : **à copier en `config.json`** |
-| `.env.example` | les chemins par défaut : **à copier en `.env`** |
-| `sample-logs.log` | deux heures de logs d'un client, avec ce qu'il faut pour faire réagir chaque détection |
-| `regex-apache.md` | le format des lignes et la regex qui les lit |
-| `README.md` | ce fichier |
+| Fichier               | Rôle                                            |
+|-----------------------|-------------------------------------------------|
+| `logwatch.py`         | le script v0, base de départ                    |
+| `test_logwatch.py`    | les quatre tests de Kevin, dont deux échouent   |
+| `config.example.json` | les seuils : **à copier en `config.json`**      |
+| `.env.example`        | les chemins par défaut : **à copier en `.env`** |
+| `sample-logs.log`     | deux heures de logs d'un client, avec ce qu'il faut pour faire réagir chaque détection |
+| `regex-apache.md`     | le format des lignes et la regex qui les lit    |
+| `README.md`           | ce fichier                                      |
 
 ## Mise en route
 

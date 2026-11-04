@@ -31,11 +31,11 @@ Coller le resultat sous l'en-tete, puis remplir la seule colonne rend.
 | détection | fonction           | ce que le README lui demande (seuil, unité, « dès que » / « au moins » / « au-delà »)                           |
 |-----------|--------------------|-----------------------------------------------------------------------------------------------------------------|
 | D1        | d1_requetes_par_ip | Liste les `top_ips` (10) IP ayant fait le plus de requêtes avec succès (statut < 400).                          |
-| D2        | d2_brute_force     | Alerte au-delà de `seuil_brute_force` (10) tentatives POST échouées (401/403) sur `url_login`.              |
-| D3        | d3_scan            | Alerte dès que l'IP a testé au moins `seuil_scan` (5) URLs suspectes différentes (liste `MOTIFS_SCAN`). |
-| D4        | d4_pic_trafic      | Alerte au-delà d'une moyenne de `seuil_pic` (100) requêtes par minute.                                      |
-| D5        | d5_erreurs_5xx     | Alerte au-delà d'un ratio de `seuil_5xx` (0.5 soit 50%) de requêtes serveur en erreur (500-599).            |
-| D6        | d6_purger_rapports | Supprime les rapports dès que leur ancienneté dépasse la limite fixée (censée être `retention_jours`).      |
+| D2        | d2_brute_force     | Alerte au-delà de `seuil_brute_force` (10) tentatives POST échouées (401/403) sur `url_login`.                  |
+| D3        | d3_scan            | Alerte dès que l'IP a testé au moins `seuil_scan` (5) URLs suspectes différentes (liste `MOTIFS_SCAN`).         |
+| D4        | d4_pic_trafic      | Alerte au-delà d'une moyenne de `seuil_pic` (100) requêtes par minute.                                          |
+| D5        | d5_erreurs_5xx     | Alerte au-delà d'un ratio de `seuil_5xx` (0.5 soit 50%) de requêtes serveur en erreur (500-599).                |
+| D6        | d6_purger_rapports | Supprime les rapports dès que leur ancienneté dépasse la limite fixée (censée être `retention_jours`).          |
 
 ## Points opaques (question 8)
 
