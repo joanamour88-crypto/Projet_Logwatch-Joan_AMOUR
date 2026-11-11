@@ -20,3 +20,17 @@ Cause racine : if len(urls) >= seuil:
 Correction prévue : if len(urls) <= seuil:
 (étape 6) Correctif : commit <hash>, <auteur>, le AAAA-MM-JJ
 Vérifié par : <nom>, sur <le cas éprouvé, différent de celui du test>
+## B3 : D4 compare la charge moyenne par minute au seuil, pas la fenêtre la plus chargée
+Date : 11/11/2026
+Symptôme : ma fenêtre la plus chargée compte 190 requêtes, seuil_pic = 100,
+  la ligne D4 affiche « alerte=false (max 170/min) » : le seuil est dépassé
+  mais aucune alerte n'est levée.
+Fonction suspectée : d4_pic_trafic
+Comparaison au seuil : ligne 11, « charge > seuil_pic ».
+Cette valeur est : charge (ligne 8), la moyenne des comptes par minute
+  (statistics.mean), et non le compte d'une fenêtre ni le maximum.
+Paramètres :
+  - entrees : lu ligne 4
+  - seuil_pic : lu ligne 11
+  - fenetre_minutes : jamais
+État : ouvert (non corrigé)

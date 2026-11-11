@@ -57,16 +57,16 @@ attendue sont comptées à part dans `lignes_ignorees`.
 
 ## Les seuils (`config.json`)
 
-| Clé | Défaut | Sens |
-|---|---|---|
-| `top_ips` | 10 | nombre d'IP affichées par D1 |
-| `seuil_brute_force` | 10 | D2 : une IP est signalée **dès qu'elle atteint** ce nombre d'échecs de connexion |
-| `url_login` | `/login` | D2 : la route de connexion surveillée |
-| `seuil_scan` | 5 | D3 : nombre d'URL suspectes distinctes à partir duquel une IP est signalée |
-| `fenetre_minutes` | 5 | D4 : largeur d'une fenêtre, en minutes ; les fenêtres se suivent sans se chevaucher (10:00-10:05, 10:05-10:10…) |
-| `seuil_pic` | 100 | D4 : requêtes dans une fenêtre au-delà desquelles on parle de pic |
-| `seuil_5xx` | 0.05 | D5 : part de réponses 5xx tolérée (5 %) |
-| `retention_jours` | 7 | D6 : âge maximal d'un rapport avant purge (**jours**) |
+|         Clé         |  Défaut  |         Sens                                                                                                    |
+|---------------------|----------|-----------------------------------------------------------------------------------------------------------------|
+| `top_ips`           | 10       | nombre d'IP affichées par D1                                                                                    |
+| `seuil_brute_force` | 10       | D2 : une IP est signalée **dès qu'elle atteint** ce nombre d'échecs de connexion                                |
+| `url_login`         | `/login` | D2 : la route de connexion surveillée                                                                           |
+| `seuil_scan`        | 5        | D3 : nombre d'URL suspectes distinctes à partir duquel une IP est signalée                                      |
+| `fenetre_minutes`   | 5        | D4 : largeur d'une fenêtre, en minutes ; les fenêtres se suivent sans se chevaucher (10:00-10:05, 10:05-10:10…) |
+| `seuil_pic`         | 100      | D4 : requêtes dans une fenêtre au-delà desquelles on parle de pic                                               |
+| `seuil_5xx`         | 0.05     | D5 : part de réponses 5xx tolérée (5 %)                                                                         |
+| `retention_jours`   | 7        | D6 : âge maximal d'un rapport avant purge (**jours**)                                                           |
 
 ## Les détections
 

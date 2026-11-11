@@ -1,5 +1,6 @@
 # docs/CARTE.md -- gabarit de départ, amendé à l'étape 4
 # Carte LogWatch v0 - v1 du AAAA-MM-JJ (étape 1)
+
 ## Entrées et sorties
 
 lit : le fichier de logs Apache (brut), la configuration (JSON), et les variables d'environnement (via .env) (et qui décide du chemin : l'option, .env, ou la valeur par défaut)
