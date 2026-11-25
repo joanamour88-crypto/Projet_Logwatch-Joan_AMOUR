@@ -5,6 +5,8 @@
 | B1 | AAAA-MM-JJ | test_d1_somme_egale_total_lines rouge : attendu 6, reçu 3    | d1_requetes_par_ip | ouvert |
 | B2 | AAAA-MM-JJ | test_d3_ignore_url_legitime rouge : attendu [], reçu ...     | d3_scan            | ouvert |
 | B3 | 2026-11-11 | seuil_pic dépassé mais D4 affiche alerte=False (max 170/min) | d4_pic_trafic      | ouvert |
+| B4 | 2026-11-25 | rapport vieilli de 8 jours non purgé : D6 rapports purges : 0| d6_purger_rapports | ouvert |
+
 
 ## B1 - <le symptôme, en cinq mots>
 Test en échec : test_d1_somme_egale_total_lines
@@ -35,4 +37,16 @@ Paramètres :
   - entrees : lu ligne 4
   - seuil_pic : lu ligne 11
   - fenetre_minutes : jamais
+État : ouvert (non corrigé)
+
+## B4 - D6 garde des rapports trop vieux
+Date : 25/11/2026
+Symptôme : rapport-20260916-103658.json vieilli à -8 jours (LastWriteTime 17/11/2026 13:42),
+  second lancement : « D6 rapports purges : 0 ». Le même test à -400 jours purge bien (1).
+README (retention_jours) : <phrase recopiée>
+Fonction visée : d6_purger_rapports, ligne <n> : <ligne qui calcule la limite>
+Cause racine : limite_jours = retention_jours * 30
+  (jours traités comme des mois : seuil réel = retention_jours x 30 jours)
+Correction prévue : limite_jours = retention_jours
+Preuve : sortie terminal D6 + contenu de essais/ après le second lancement
 État : ouvert (non corrigé)
