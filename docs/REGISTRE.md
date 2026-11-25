@@ -1,9 +1,11 @@
 # docs/REGISTRE.md -- ouvert à l'étape 2, complété aux étapes 3 et 4, arrêté à l'étape 5, fermé ligne à ligne à l'étape 6
 # Registre des défauts LogWatch - N défaut(s) ouvert(s) au AAAA-MM-JJ
-| n° | date       | symptôme observé                                          | fonction suspectée | état  |
-|----|------------|-----------------------------------------------------------|--------------------|--------|
-| B1 | AAAA-MM-JJ | test_d1_somme_egale_total_lines rouge : attendu 6, reçu 3 | ...                | ouvert |
-| B2 | AAAA-MM-JJ | test_d3_ignore_url_legitime rouge : attendu [], reçu ...  | ...                | ouvert |
+| n° | date       | symptôme observé                                             | fonction suspectée | état   |
+|----|------------|--------------------------------------------------------------|--------------------|--------|
+| B1 | AAAA-MM-JJ | test_d1_somme_egale_total_lines rouge : attendu 6, reçu 3    | d1_requetes_par_ip | ouvert |
+| B2 | AAAA-MM-JJ | test_d3_ignore_url_legitime rouge : attendu [], reçu ...     | d3_scan            | ouvert |
+| B3 | 2026-11-11 | seuil_pic dépassé mais D4 affiche alerte=False (max 170/min) | d4_pic_trafic      | ouvert |
+
 ## B1 - <le symptôme, en cinq mots>
 Test en échec : test_d1_somme_egale_total_lines
 Attendu / reçu : 6 / 3
